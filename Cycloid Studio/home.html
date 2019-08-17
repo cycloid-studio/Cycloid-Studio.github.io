@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Cycloid Studio</title>
+        <style>
+            body {
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .menu {
+                background-color: #ffffff;
+            }
+            .desktop {
+                cursor: pointer;
+                display: inline-block;
+                padding: 20px 20px 20px 30px;
+            }
+            .mobile {
+                cursor: pointer;
+                display: none;
+                padding: 20px 20px 20px 30px;
+            }
+            .mobile > span {
+                background: black;
+                border-radius: 20%;
+                width: 38px;
+                height: 3px;
+                margin-bottom: 3px;
+                display: block;
+                width: 30px;
+            }
+            /* Responsive Rules */
+            @media screen and (max-width: 500px) {
+                .desktop {
+                    display: none;
+                }
+                .mobile {
+                    display:inline-block;
+                }
+            }
+            .bgimg {
+                background: url(img/sf.JPEG);
+                background-position: center;
+                background-size: cover;
+                color: #ffffff;
+                height: 80%;
+                position: relative;
+                text-align: center; 
+            }
+            header {
+                font-size: 23px;
+                letter-spacing: 10px;
+                padding: 150px 20px 20px 20px;
+            }
+            h2 {
+                letter-spacing: 3px;
+            }
+            .About {
+                padding: 20px 20px 20px 50px;
+            }
+            .Explore {
+                background-color: rgba(248, 248, 238, 0.623);
+                padding: 20px 20px 20px 50px;
+            }
+            .pic {
+                box-shadow: 5px 5px 5px grey;
+                height: auto;
+                margin-bottom: 20px;
+                width: 80%;
+            }
+            .Team {
+                list-style: none;
+                padding: 20px 20px 20px 50px;
+            }
+            .people {
+                border-radius: 50%;
+            }
+            .Contact {
+                background-color: rgba(248, 248, 238, 0.623);
+                padding: 20px 20px 20px 50px;
+            }
+
+        </style>
+    </head>
+ 
+    <body>
+        <div class="menu">
+            <div class="desktop">About</div>
+            <div class="desktop">Explore</div>
+            <div class="desktop">Meet the Team</div>
+            <div class="desktop">Contact</div>
+            <div class="mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="bgimg">
+            <header><h1>Cycloid Studio</h1></header>
+            <p>Develop website for conference, clubs, and friends.</p>
+        </div>
+
+        <div class="About">
+            <h2>About</h2>
+            Develop website for conference, clubs, and friends.
+        </div>
+
+        <div class="Explore">
+            <h2>Explore</h2>
+            <div class="show-mobile">
+                <div><a href="https://datong.berkeley.edu"><img class="pic" src="img/datong.png" height="200", width="280"></a></div>
+                <div><a href="https://www.textxd.org"><img class="pic" src="img/TextXD.png" height="200", width="280"></a></div>
+            </div>    
+        </div>
+
+        <div class="Team">
+            <h2>Meet the Team</h2>
+            <div><img class="people" src="img/Zoey.JPG" height="150", width="150"><br>Zoey Sun</div>
+            <div><img class="people" src="img/Voilet.jpeg" height="150", width="150"><br>Violet Yao</div>
+            <div><img class="people" src="img/Mark.png" height="150", width="150"><br>Mark Zhang</div>
+            <div><img class="people" src="img/Yuhong.png" height="150", width="150"><br>Yuhong Chen</div>
+        </div>
+
+        <div class="Contact">
+            <h2>Contact</h2>
+        </div>
+
+    </body>
+    <script>
+    </script>
+</html>
