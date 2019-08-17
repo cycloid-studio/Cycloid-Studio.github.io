@@ -7,6 +7,12 @@
                 margin: 0;
                 padding: 0;
             }
+            a {
+                text-decoration: none;
+            }
+            a:visited {
+                color:black;
+            }
             .menu {
                 background-color: #ffffff;
             }
@@ -55,8 +61,11 @@
             h2 {
                 letter-spacing: 3px;
             }
+            .bgimg > p {
+                padding: 0px 50px 0px 50px;
+            }
             .About {
-                padding: 20px 20px 20px 50px;
+                padding: 20px 20px 40px 50px;
             }
             .Explore {
                 background-color: rgba(248, 248, 238, 0.623);
@@ -65,30 +74,56 @@
             .pic {
                 box-shadow: 5px 5px 5px grey;
                 height: auto;
-                margin-bottom: 20px;
-                width: 80%;
+                margin-bottom: 30px;
+                margin-left: 20%;
+                width: 70%;
             }
             .Team {
-                list-style: none;
-                padding: 20px 20px 20px 50px;
+                padding: 20px 20px 40px 50px;
             }
-            .people {
+            .Team > .grid-container {
+                display: inline-grid;
+                grid-template-columns: 200px 200px;
+                grid-row: auto auto;
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                margin-left: 20%;
+            }
+            .item {
                 border-radius: 50%;
+                display:flex;
             }
             .Contact {
                 background-color: rgba(248, 248, 238, 0.623);
                 padding: 20px 20px 20px 50px;
             }
-
+            input[type=text], select, textarea {
+                width: 100%; /* Full width */
+                padding: 12px; /* Some padding */  
+                border: 1px solid #ccc; /* Gray border */
+                border-radius: 4px; /* Rounded borders */
+                box-sizing: border-box; /* Make sure that padding and width stays in place */
+                margin-top: 6px; /* Add a top margin */
+                margin-bottom: 16px; /* Bottom margin */
+                resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+            }
+            input[type=submit] {
+                background-color: rgb(102, 101, 94);
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
         </style>
     </head>
  
     <body>
         <div class="menu">
-            <div class="desktop">About</div>
-            <div class="desktop">Explore</div>
-            <div class="desktop">Meet the Team</div>
-            <div class="desktop">Contact</div>
+            <div class="desktop"><a href="#About">About</a></div>
+            <div class="desktop"><a href="#Explore">Explore</a></div>
+            <div class="desktop"><a href="#Team">Meet the Team</a></div>
+            <div class="desktop"><a href="#Contact">Contact</a></div>
             <div class="mobile">
                 <span></span>
                 <span></span>
@@ -98,14 +133,19 @@
 
         <div class="bgimg">
             <header><h1>Cycloid Studio</h1></header>
-            <p>Develop website for conference, clubs, and friends.</p>
+            <p>Develop websites for conference, clubs, and friends.</p>
+            <p>Concrete your idea into creative and mutifunctional pages online.</p>
         </div>
 
+        <a name="About">
         <div class="About">
             <h2>About</h2>
             Develop website for conference, clubs, and friends.
+            Concrete your idea into creative and mutifunctional pages online.
         </div>
+        </a>
 
+        <a name="Explore">
         <div class="Explore">
             <h2>Explore</h2>
             <div class="show-mobile">
@@ -113,18 +153,38 @@
                 <div><a href="https://www.textxd.org"><img class="pic" src="img/TextXD.png" height="200", width="280"></a></div>
             </div>    
         </div>
+        </a>
 
+        <a name="Team">
         <div class="Team">
             <h2>Meet the Team</h2>
-            <div><img class="people" src="img/Zoey.JPG" height="150", width="150"><br>Zoey Sun</div>
-            <div><img class="people" src="img/Voilet.jpeg" height="150", width="150"><br>Violet Yao</div>
-            <div><img class="people" src="img/Mark.png" height="150", width="150"><br>Mark Zhang</div>
-            <div><img class="people" src="img/Yuhong.png" height="150", width="150"><br>Yuhong Chen</div>
+            <div class="grid-container">
+                <div><img class="item" src="img/Zoey.JPG" height="150", width="150"><br>Zoey Sun</div>
+                <div><img class="item" src="img/Voilet.jpeg" height="150", width="150"><br>Violet Yao</div>
+                <div><img class="item" src="img/Mark.png" height="150", width="150"><br>Mark Zhang</div>
+                <div><img class="item" src="img/Yuhong.png" height="150", width="150"><br>Yuhong Chen</div>
+            </div>
         </div>
+        </a>
 
+        <a name="Contact">
         <div class="Contact">
             <h2>Contact</h2>
+            <div class="container">
+                <form action="action_page.php"> 
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name..">
+                    <br>
+                    <label for="Email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Your email name..">
+                    <br>
+                    <label for="message">Subject</label>
+                    <textarea id="message" name=message" placeholder="Write something.." style="height:200px"></textarea>                
+                    <input type="submit" value="Submit">  
+                </form>
+            </div>
         </div>
+        </a>
 
     </body>
     <script>
