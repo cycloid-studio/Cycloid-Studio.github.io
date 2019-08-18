@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Cycloid Studio</title>
+        <link rel="icon" href="img/logo.png">
         <style>
             body {
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -16,6 +17,14 @@
             .menu {
                 background-color: #ffffff;
             }
+            .logo {
+                display: inline-block;
+                vertical-align: top;
+                width: 50px;
+                height: 50px;
+                margin-left: 10px;
+                margin-right: 5px;
+            }
             .desktop {
                 cursor: pointer;
                 display: inline-block;
@@ -24,7 +33,7 @@
             .mobile {
                 cursor: pointer;
                 display: none;
-                padding: 20px 20px 20px 30px;
+                padding: 20px 20px 17px 20px;
             }
             .mobile > span {
                 background: black;
@@ -36,12 +45,20 @@
                 width: 30px;
             }
             /* Responsive Rules */
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: 600px) {
                 .desktop {
                     display: none;
                 }
                 .mobile {
                     display:inline-block;
+                }
+            }
+            @media screen and (max-width: 520px) {
+                .Team > .grid-container {
+                    display:flex;
+                }
+                .item {
+                    border-radius: 50%;
                 }
             }
             .bgimg {
@@ -75,7 +92,7 @@
                 box-shadow: 5px 5px 5px grey;
                 height: auto;
                 margin-bottom: 30px;
-                margin-left: 20%;
+                margin-left: 12%;
                 width: 70%;
             }
             .Team {
@@ -87,7 +104,8 @@
                 grid-row: auto auto;
                 grid-column-gap: 20px;
                 grid-row-gap: 20px;
-                margin-left: 20%;
+                margin-left: 10%;
+                width: 50%;
             }
             .item {
                 border-radius: 50%;
@@ -120,6 +138,7 @@
  
     <body>
         <div class="menu">
+            <img class="logo" src="img/logo.png">
             <div class="desktop"><a href="#About">About</a></div>
             <div class="desktop"><a href="#Explore">Explore</a></div>
             <div class="desktop"><a href="#Team">Meet the Team</a></div>
@@ -179,7 +198,7 @@
                     <input type="text" id="email" name="email" placeholder="Your email name..">
                     <br>
                     <label for="message">Subject</label>
-                    <textarea id="message" name=message" placeholder="Write something.." style="height:200px"></textarea>                
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>                
                     <input type="submit" value="Submit">  
                 </form>
             </div>
