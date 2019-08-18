@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ -a .commit ]
+    then
+    rm .commit
+    date +'%Y/%m/%d %T' > assets/timestamp.html;
+    whoami >> assets/timestamp.html
+    echo 'timestamp written';
+    git add assets/timestamp.html;
+    git commit --amend -C HEAD --no-verify;
+fi
+exit
